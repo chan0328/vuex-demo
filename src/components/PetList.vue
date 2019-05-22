@@ -1,13 +1,14 @@
 <template>
     <div id="product-list-two">
-        <h2>Product List Two</h2>
+        <h2>Pet List</h2>
         <ul>
-            <li v-for="product in products">
-                <span class="name">{{ product.name }}</span>
-                <span class="price">${{ product.price }}</span>
+            <li v-for="pet in pets">
+                <span class="name">{{ pet.name }}</span>
+                <span class="price">{{ pet.age }}岁</span>
             </li>
             <button @click="setName">设置名字</button>
             <button @click="setNameAsync">异步设置名字</button>
+            <button @click="setPetAge">设置年龄+1</button>
         </ul>
     </div>
 </template>
@@ -16,15 +17,19 @@
 export default {
     data () {
         return {
-            products:this.$store.state.a.products
+            pets:this.$store.state.b.pets
         }
     },
     methods:{
         setName(){
-            this.$store.commit('save','有线鼠标');//mutations
+            this.$store.commit('setPetName','狸花猫');//mutations
         },
         setNameAsync(){
-            this.$store.dispatch('getProducts','无线鼠标');//actions
+            this.$store.dispatch('getPetName','折耳猫');//actions
+        },
+        setPetAge(){
+            this.pets=this.$store.getters.setAge;
+            this.$store.commit('setPetAge',this.pets);//要改变state才能在增加
         }
     },
 }

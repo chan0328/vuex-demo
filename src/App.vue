@@ -2,18 +2,21 @@
   <div id="app">
       <product-list-one v-bind:products="products"></product-list-one>
       <product-list-two v-bind:products="products"></product-list-two>
+      <pet-list></pet-list>
   </div>
 </template>
 
 <script>
 import ProductListOne from './components/ProductListOne.vue'
 import ProductListTwo from './components/ProductListTwo.vue'
+import PetList from './components/PetList.vue'
 
 export default {
     name: 'app',
     components: {
         'product-list-one': ProductListOne,
-        'product-list-two': ProductListTwo
+        'product-list-two': ProductListTwo,
+        'pet-list': PetList
     },
     data () {
         return {

@@ -12,10 +12,9 @@
 
 <script>
 export default {
-    props: ['products'],
     data () {
         return {
-
+            products:this.$store.getters.saleProducts
         }
     }
 }
