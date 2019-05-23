@@ -109,28 +109,6 @@ export default {
 }
 </script>
 
-<style scoped>
-#product-list-one{
-    background: #FFF8B1;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
-    padding: 10px 20px;
-}
-#product-list-one ul{
-    padding: 0;
-}
-#product-list-one li{
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 10px;
-    padding: 20px;
-    background: rgba(255,255,255,0.7);
-}
-.price{
-    font-weight: bold;
-    color: #E8800C;
-}
-</style>
 ```
 
 ```javascript
@@ -157,30 +135,6 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-#product-list-two{
-    background: #D1E4FF;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
-    padding: 10px 20px;
-}
-#product-list-two ul{
-    padding: 0;
-    list-style-type: none;
-}
-#product-list-two li{
-    margin-right: 10px;
-    margin-top: 10px;
-    padding: 20px;
-    background: rgba(255,255,255,0.7);
-}
-.price{
-    font-weight: bold;
-    color: #860CE8;
-    display: block;
-}
-</style>
 
 ```
 
@@ -360,7 +314,6 @@ export default {
     }
 }
 ```
-
 
 - 添加按钮, 可以发现, Product List Two中的价格减少了2, 当然你可以自定义`payload`,以此自定义减少对应的价格.
 ![mutations效果][6]

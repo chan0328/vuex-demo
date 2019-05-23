@@ -1,6 +1,6 @@
 const products={
     state:{
-        //类似data存放数据
+        //类似data
         products:[
             {name: '鼠标', price: 20},
             {name: '键盘', price: 40},

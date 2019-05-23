@@ -1,6 +1,6 @@
 const pets={
     state:{
-        //类似data存放数据
+        //类似data
         pets:[
             {name: '啊猫', age: 2},
             {name: '啊狗', age: 3},
